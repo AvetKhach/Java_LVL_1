@@ -1,5 +1,4 @@
 package com.company.Homework1;
-
 import java.util.Scanner;
 
 public class H_W_4_Action {
