@@ -10,15 +10,12 @@ public class OddNumbersAndSum {
         System.out.println("Please include count of odd numbers.");
         int count = scanner.nextInt();
         oddChecker(count);
-
     }
-
     public static void oddChecker(int count) {
         int sum=0;
         int value =1;
         System.out.print("The odd numbers are: ");
         for (int i = 1; i <= count; i++) {
-
             System.out.print(value+ ",");
             sum+=value;
             value+=2;
