@@ -1,15 +1,24 @@
 package com.company.Homework3;
 
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class ShipBattle {
-    public static void main(String[] args) {
-        System.out.println("This is beautiful game Ship Battle \n Let's start ");
-        //createEmptyBoardAndShow();
+    public static void main(String[] args) throws InterruptedException {
+
+        System.out.println("This is beautiful game Ship Battle");
+        Thread.sleep(1000);
+        System.out.println("Let's start ");
+        Thread.sleep(1000);
         System.out.println("Please include coordinates !!");
+        Thread.sleep(1000);
         System.out.println("Format including: type number 0-10 and press enter, do this action 2 time for X and Y coordinates ");
         int[][] battleBoard = createShipsInBoard(createShipsPoints());
-        String[][] resultBoard = checkCoordinates(includeCoordinates(),battleBoard, createEmptyBoardAndShow());
+        Thread.sleep(8000);
+        String [][] emptyArray =createEmptyBoardAndShow();
+        System.out.println("#############################################");
+
+        String[][] resultBoard = checkCoordinates(includeCoordinates(),battleBoard, emptyArray);
 
 
         for (int i = 0; i < 100; i++) {
@@ -23,7 +32,7 @@ public class ShipBattle {
 
     }
 
-    public static String[][] createEmptyBoardAndShow() {
+    public static String[][] createEmptyBoardAndShow() throws InterruptedException {
         String[][] emptyArray = new String[11][11];
         for (int i = 0; i < 11; i++) {
             for (int j = 0; j < 11; j++) {
@@ -34,10 +43,12 @@ public class ShipBattle {
                 } else {
                     emptyArray[i][j] = "*";
                 }
+                Thread.sleep(100);
                 System.out.print(emptyArray[i][j] + " ");
             }
             System.out.println();
         }
+        System.out.println();
         return emptyArray;
 
     }
@@ -112,8 +123,9 @@ public class ShipBattle {
         return battleBoard;
     }
 
-    public static int[] includeCoordinates() {
+    public static int[] includeCoordinates() throws InterruptedException {
         int[] arr = new int[2];
+        Thread.sleep(1000);
         System.out.println("Include coordinates !!");
         arr[0] = new Scanner(System.in).nextInt();
         arr[1] = new Scanner(System.in).nextInt();
