@@ -7,22 +7,15 @@ public class RandomString {
         for (int i = 0; i <10 ; i++) {
             returnRandomString();
         }
-
     }
     public static void returnRandomString(){
-        String randomString = "";
-        Random r = new Random();
-        while(randomString.length()<=5){
+        String [] array= {"a","b","w","7","8","9","u"};
+        String newArray = "";
+        for (int i = 0; i <5 ; i++) {
 
-            int randomInt = new Random().nextInt(10);
-            char randomChar = (char) (r.nextInt(26)+'a');
-            if(randomInt<5){
-                randomString+=randomChar;
-            } else {
-                randomString+=randomInt;
-            }
+            newArray += array[new Random().nextInt(7)];
         }
-        System.out.println(randomString);
+        System.out.println(newArray);
 
     }
 }
