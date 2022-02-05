@@ -7,6 +7,4 @@ public class ACAClass {
     long endMillis;
     String name;
     int fee;
-
-
 }
