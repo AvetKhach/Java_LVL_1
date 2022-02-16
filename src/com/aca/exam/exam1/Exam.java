@@ -16,7 +16,7 @@ public class Exam {
 
     public void includeOptionNumber(int[] array) {
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; ; i++) {
             System.out.println("Insert option number 1-8");
             int num = new Scanner(System.in).nextInt();
             if (num >= 1 && num < 8) {
@@ -32,7 +32,6 @@ public class Exam {
 
 
     public void doOptions(int[] array, int num) {
-
 
 
         switch (num) {
@@ -52,16 +51,16 @@ public class Exam {
                 break;
             case 3:
                 for (int i = 0; i < array.length; i++) {
-                    array[i] *= array[i];
+                    array[i] = 2 * array[i];
                     System.out.print(array[i] + " ");
                 }
                 break;
             case 4:
-                int sum = 0;
-                for (int i = 0; i <array.length ; i++) {
-                    sum+=array[i];
+                double sum = 0;
+                for (int i = 0; i < array.length; i++) {
+                    sum += array[i];
                 }
-                System.out.println("Average is: " + (sum/5));
+                System.out.println("Average is: " + (sum / array.length));
                 break;
             case 5:
                 System.out.println("Please include N index, I'll return value");
@@ -76,20 +75,20 @@ public class Exam {
                 int min6 = min(min5, array[2]);
                 int min7 = min(min6, array[3]);
                 int min8 = min(min7, array[4]);
-                System.out.println("Max -  Min = "+ (max8-min8));
+                System.out.println("Max -  Min = " + (max8 - min8));
                 break;
             case 7:
                 String arr = "";
-                int count = 0;
-                for (int i = 0; i < array.length ; i++) {
-                    arr+=array[i];
+                for (int i = 0; i < array.length; i++) {
+                    arr += array[i];
                 }
-                for (int i = 0; i <arr.length() ; i++) {
-                    if (arr.charAt(i)=='0'){
+                int count = 0;
+                for (int i = 0; i < arr.length(); i++) {
+                    if (arr.charAt(i) == '0') {
                         count++;
                     }
                 }
-                System.out.println("Zero symbol value = "+ count);
+                System.out.println("Zero symbol value = " + count);
         }
     }
 
@@ -108,14 +107,14 @@ public class Exam {
             return second;
         }
     }
-    public void returnNIndex(int[]array){
-        for (int i = 0; i < 100; i++) {
+    public void returnNIndex(int[] array) {
+        for (int i = 0; ; i++) {
             System.out.println("Let's");
             int value = new Scanner(System.in).nextInt();
-            if (value>=1&& value<=5){
-                System.out.println(array[i+1]);
+            if (value >= 1 && value <= 5) {
+                System.out.println(array[i + 1]);
                 break;
-            }else {
+            } else {
                 System.out.println("N number is not right, please include in required range 1-5");
             }
         }
