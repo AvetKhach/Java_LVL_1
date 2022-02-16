@@ -4,4 +4,5 @@ public class MaxMin {
 
     long max;
     long min;
+
 }
