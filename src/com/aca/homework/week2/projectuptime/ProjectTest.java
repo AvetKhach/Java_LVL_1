@@ -7,7 +7,6 @@ public class ProjectTest {
         long start = System.currentTimeMillis();
         Project[] projects = new Project[3];
         for (int i = 0; i < projects.length; i++) {
-            projects[i] = new Project();
             projects[i] = createProject(start);
         }
         printProjects(projects);
