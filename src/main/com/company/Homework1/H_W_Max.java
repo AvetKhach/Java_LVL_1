@@ -8,11 +8,17 @@ public class H_W_Max {
     }
 
     public static long max(long i1, long i2) {
+        return i1>i2?i1:i2;
+
+
+
+/*
         if (i1 > i2){
             return i1;
         }
         else {
             return i2;
         }
+*/
     }
 }
