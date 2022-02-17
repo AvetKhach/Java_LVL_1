@@ -1,0 +1,34 @@
+Create an Image class that contains pixels. The image pixel length in vertical and horizontal directions should be provided in a constructor.
+The Image class must have a draw method that draws the * in the given location.
+It also must have a show method that shows a drawn image.
+e.g
+Image image = new Image(5, 10);
+image.show();
+-----
+-----
+-----
+-----
+-----
+-----
+-----
+-----
+-----
+-----
+image.draw(1,2);
+image.draw(2,1);
+image.draw(2,2);
+image.draw(2,3);
+..
+..
+..
+image.show();
+-----
+--*--
+-***-
+*****
+*---*
+*---*
+*---*
+*---*
+*****
+-----
