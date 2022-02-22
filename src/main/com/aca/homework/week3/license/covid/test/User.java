@@ -4,7 +4,7 @@ public class User {
     private String userName;
     private String name;
 
-    public User(String userName, String name){
+    public User(String name, String userName){
         this.name = name;
         this.userName = userName;
     }

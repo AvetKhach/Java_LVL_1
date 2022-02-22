@@ -6,7 +6,7 @@ public class CovidTest {
     private User user;
     private String defaultResult = "undefined";
 
-    private String [] possibleResults = {"positive", "negative"};
+    private final String [] possibleResults = {"positive", "negative"};
 
 
 
@@ -17,15 +17,15 @@ public class CovidTest {
         waiting3Sec();
         int randomIndex = new Random().nextInt(3);
         if(randomIndex==0){
-            System.out.println(randomIndex);
-            return this.defaultResult=possibleResults[0];
+            this.defaultResult=possibleResults[0];
+            System.out.print(defaultResult);
         }else if(randomIndex==1){
-            System.out.println(randomIndex);
-            return this.defaultResult=possibleResults[1];
+            this.defaultResult=possibleResults[1];
+            System.out.print(defaultResult);
         }else{
-            System.out.println(randomIndex);
-            return this.defaultResult;
+            System.out.print(defaultResult);
         }
+        return defaultResult;
     }
 
     public void waiting3Sec(){
